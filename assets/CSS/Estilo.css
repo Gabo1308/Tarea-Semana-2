@@ -1,0 +1,317 @@
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  font-family: 'Arial', 'Roboto', 'Times New Roman', 'sans-serif';
+  color: #333;
+  line-height: 1.5;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a:hover {
+  color:red;
+  text-decoration: underline;
+}
+
+
+#coca-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 1);
+  z-index: 1000;
+  padding: 15px 20px;
+  text-align: center;
+  
+}
+
+#coca-header .coca-title {
+  float: left;
+  display: flex;  
+  text-align: left;
+  margin: 0;                
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#coca-header .coca-nav {
+  float: right;
+  display: flex;
+  text-align: right;
+  margin-top: 5px;
+  order:calc(10 + 2);
+}
+
+#coca-header h1.coca-title {
+  color: red;
+  font-size: 24px;
+}
+
+#coca-header .coca-nav .coca-list {
+  list-style: none;
+  display: flex;                 
+}
+
+#coca-header .coca-nav .coca-list .coca-item {
+  display: inline;
+  margin-right: 30px;
+  flex-shrink: 5;
+}
+
+#coca-header .coca-nav .coca-list .coca-item a {
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+#coca-header .coca-nav .coca-list .coca-item a:hover {
+  color: red;
+}
+
+#coca-header::after {
+  content: '';
+  clear: both;
+}
+
+
+main {
+  clear: both;
+}
+
+main section {
+  padding: 60px 20px;
+  border-bottom: 1px solid #eee;
+  height: auto;
+  display: flow-root;
+}
+
+main section .coca-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: red;
+}
+
+main section .coca-description {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.icon {
+  transform: translateX(-50%);
+  font-size: 32px;
+  color: gray;
+  width: 50px;
+  height: 50px;
+}
+
+main section article {
+  max-width: 1200px;
+  margin: auto;
+}
+
+#home {
+  display: flex;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('../img/coca.png') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+  height: 100vh;
+  position: relative;
+  flex-grow: 1;
+}
+
+#home article {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -400px;
+  margin-top: -80px;
+  width: 800px;
+}
+
+#home p:first-of-type {
+  color: rgba(5, 5, 5, 0.9);
+  margin: 15px 0px;
+  font-size: 38px;
+  font-weight: bold;
+}
+
+#home p {
+  color: rgba(5, 5, 5, 0.9);
+  margin: 15px 0px;
+  font-size: 18px;
+}
+
+#creador {
+    clear: both;
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#creador .coca-content img {
+    float: left;
+    width: 25%;
+    height: 350px;
+    margin-right: 0px;
+    margin-bottom: 50px;
+    visibility: visible;
+}
+
+@media (max-width: 600px) {
+  #creador .coca-content .coca-content-text {
+    float: left;
+    width: 50%;
+    padding-left: 20px;
+    flex: 100%;
+  }
+}
+
+
+#creador .coca-content .coca-content-text p {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+#lata {
+    display: flex;
+    align-content: space;
+    clear: both;
+    overflow: auto;
+    
+}
+
+#lata .coca-content img {
+    float: left;
+    width: 25%;
+    height: 350px;
+    margin-right: 0px;
+    margin-bottom: 50px;
+    visibility: visible;
+}
+
+#lata .coca-content .coca-content-text {
+    display: flex;  
+    float: left;
+    width: 50%;
+    padding-left: 20px;
+    justify-content: space-around;
+}
+
+#lata .coca-content .coca-content-text p {
+    text-align: justify;
+    margin-bottom: 20px;
+    margin-right: 5%;
+}
+
+#lata .coca-content .coca-list {
+  list-style: none;
+  display: flex;    
+  padding: 0;
+  flex-direction: column;            
+}
+
+#lata .coca-content .coca-list .coca-item{
+  padding: 10;           
+}
+
+footer {
+  display: flex;
+  clear: both;
+  color: red;
+  background-color: black;
+  overflow: auto;
+}
+
+footer .footer-content{
+  display: flex;
+  align-items: center;
+}
+footer .footer-content .footer-column{
+  text-align: left;
+}
+
+/*Lista de conceptos y casos para usarlos
+  padding: Genera un espacio alrededor del contenido de un elemento, se puede usar cuando el texto no esta
+  pegado al borde o dar espacio en blanco a cajas.
+
+  border: Permite darle estilo, color y definir la anchura del borde de un elemento, se usa para resaltar información o mostrar contornos.
+
+  Margin: Determina la distancia de los elementos y el borde de una caja, puede ser usado para separar secciones o crear distancias entre bloques.
+
+  Position: Especifica el posicionamiento de un elemento, puede usarse para mover una imagen o un texto hacia el lugar deseado por el desarrollador.
+
+  Float y Clear: Float especifica como un elemento flota dentro de su contenedor, se puede usar para hacer que una imagen flote a la izquierda, derecha 
+  o que no lo haga con none para que el resto de los elementos floten excepto ese. Clear especifica que sucede a un elemento que esta al lado de uno que flota, 
+  se usa para evitar que elementos de la caja se envuelvan alrededor o al lado del elemento que flota.
+
+  Display: controla el diseño de una parte del html, por default es block o inline, se puede usar para cambiar el diseño ya sea para ocultarlo (con none), 
+  o con flex para que las caracteristicas de flexbox funcionen.
+
+  Overflow: controla el contenido que es muy grande para un área, le añade scrollbars si es necesario, se puede usar si un texto es demasiado grande para su 
+  propia área.
+
+  Visibility: enseña u oculta elementos sin tener que cambiar el diseño del HTML, se usa para ocultar texto o imagenes.
+
+  Z-index: especifica el orden del stackeo de los elementos, definiendo cuál ira primero y último, se puede usar para poner una imágen detrás de un texto con un
+  valor negativo de -1.
+
+  Contenido Flexbox:
+
+  Flex Conteiner:
+
+  flex-direction: Especifica lña direccón que tomará un elemento en el diseño del documento, ya sea horizontal, vertical, e incluso horizontal 
+  invertido (osea de derecha a izquierda) y vertical invertido (de abajo hacia arriba)
+
+  flex-wrap: Si no hay suficiente espacio esta propiadad acomoda los elementos, se puede usar para camodar los elementos de arriba hacia abajo o viceversa.
+
+  flex-flow: es una combinación de los dos anteriores, se puede usar para ahorrar código.
+  
+  justify-content:se usa alinear los objetos cuando no usan todo el espacio disponible de forma horizontal, se puede usar para alinearlos al centro, a la derecha
+  o la izquierda.
+
+  align-items: es lo mismo que el anterior, pero en vez de ser acomodados en horizontal, lo son en vertical, se puede usar para acomodar los elementos arriba, en el
+  centro o abajo.
+
+  align-content: es parecido al anterior, pero en vez de acomodar los objetos, acomoda los espacios, se usa para alargarlas, separar los objetos para que unos esten arriba
+  y otros abajo, todos arriba o todos abajo.
+
+  Flex Items:
+
+  order: Especifica el orden con el que aparecen los items, se usa cuando se quieren acomodar los items si se agregaron de forma erronea.
+
+  flex-grow: Agranda un item dentro de una caja, se usa si se quiere agrandar la cantidad de espacio que puede tener un texto.
+
+  flex-shrink: Encoje un item dentro de una caja, se usa si se quiere encoger la cantidad de espacio que puede tener una imágen.
+  
+  flex-basis: Especifica la cantidad de espacio que puede tener un item, se puede usar para agrandar o encoger un item.
+
+  flex: Es los últimos tres en un solo comando. se usa para poder personalizar un item con solo un comando.  
+
+  align-self: Especifia el alineado de un item en una caja flexeada, sirve para acomodar items
+
+  Flex Responsive: se usa para crear diseños que ajustan automaticamente con los monitores del que esta viendo la página.
+
+*/ 
